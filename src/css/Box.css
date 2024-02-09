@@ -1,27 +1,31 @@
 .box{
     width: 300px;
-    height: 400px;
-    background-color: aliceblue;
-    border: 10px solid black;
+    height: 380px;
+    border-right: 1px solid lightgray;
     text-align: center;
+    margin: 25px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .img-size{
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
 }
 
 .WIN {
-    border: 10px solid blue;
     color: blue;
+    border-radius: 10px;
 }
 
 .TIE {
-    border: 10px solid black;
     color: black;
+    border-radius: 10px;
 }
 
 .LOSE {
-    border: 10px solid red;
     color: red;
+    border-radius: 10px;
 }

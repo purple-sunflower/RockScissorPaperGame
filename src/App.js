@@ -1,8 +1,12 @@
 // 240209 제작 시작
+// 240209 해결해야하는 것
+// 1. state 값이 바로 바뀌지 않음.
+// 2. 오른쪽 box의 오른쪽 경계선을 없애야 함.
+// 3. 처음 시작 시, User와 Computer 이름만 중간에 뜨도록
+// 4. 가위바위보 사진을 버튼 사진과 같도록
 
 import './App.css';
 import Box from './components/Box';
-import Counter from './components/Counter';
 import RockImg from './images/Rock.png'
 import ScissorImg from './images/Scissor.png'
 import PaperImg from './images/Paper.png'
@@ -46,13 +50,19 @@ function App() {
     setComSelect(option[comChoice])
 
     setResult(showResult(option[userChoice], option[comChoice]));
-    counter();
+    counter(result);
   }
 
-  // 승패 점수 보여주기
+  // 점수 reset
+  const resetScore = () => {
+    setUserWin(0);
+    setComWin(0);
+  }
+
+  // 승패 점수 보여주기 (240209 현재 state 값이 바로 반영되지 않는 이슈)
   const counter = (result) => {
-    if(result == "WIN") setUserWin(userWin+1)
-    else if (result == "LOSE") setComWin(comWin+1)
+      if (result == "WIN") setUserWin(userWin => userWin+1);
+      else if (result == "LOSE") setComWin(comWin => comWin+1);
   }
 
   // 승패 보여주기 (User 입장)
@@ -70,17 +80,19 @@ function App() {
     return optionArr[element]
   }
 
-  {/*240209 카운터 제작법 생각*/}
   return (
     <div className='wrap'>
       <div className='counter'>
+        <div>{userWin}</div>
+        <div>:</div>
+        <div>{comWin}</div>
+        <button className="reset-btn" onClick={resetScore}>reset</button>
       </div>
-      <h1>안내면 진다, 가위바위보!</h1>
       <div className='area'>
-        <Box title="I" item={userSelect} result={result}/>
-        <Box title="Com" item={comSelect} result={result}/>
+        <Box title="User" item={userSelect} result={result}/>
+        <Box title="Computer" item={comSelect} result={result}/>
       </div>
-      <div className='area'>
+      <div className='area btn-area'>
         <button className="scissor btn" onClick={() => play("scissor")}>
           <img className="btn-img" src={ScissorImg}/>
           </button>
