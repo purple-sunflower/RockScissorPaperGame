@@ -1,13 +1,13 @@
 .box{
     width: 300px;
     height: 380px;
-    border-right: 1px solid lightgray;
     text-align: center;
     margin: 25px 0px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    border-right: 1px solid lightgray;
 }
 
 .img-size{
