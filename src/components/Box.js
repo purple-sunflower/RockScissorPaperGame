@@ -4,7 +4,6 @@ import '../css/Box.css'
 const Box = (props) => {
 
   // 컴퓨터 승패 알려주기
-  // 어쩌라는고지
   let result;
   if (props.title === "Com" && props.result !="TIE" && props.result != "") {
     result = (props.result === "WIN" ? "LOSE" : "WIN")
