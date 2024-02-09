@@ -1,75 +1,51 @@
-<<<<<<< HEAD
-# Getting Started with Create React App
+## 프로젝트 제목
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+안내면 진다~ 가위바위보!<br><br>
 
-## Available Scripts
+## 프로젝트 한 줄 소개
 
-In the project directory, you can run:
+컴퓨터를 이겨라! <br>
+컴퓨터와 함께하는 간단한 가위바위보 게임 ✌️✊🖐️<br><br>
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 개발 기간
+2024.02.09~<br><br>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 개발 환경
+- Javascript
+- React
+- Github, Github pages
+<br><br>
 
-### `npm test`
+## 주요 기능
+1. 사용자가 선택한 요소(가위, 바위, 보 중) 보이기
+2. 컴퓨터가 랜덤으로 선택한 요소 보이기
+3. 사용자와 컴퓨터의 승패 유무 보이기
+4. 사용자와 컴퓨터의 득점 현황 보이기
+<br><br>
+/ 240209 해결해야하는 것
+// 1. state 값이 바로 바뀌지 않음.
+// 2. 오른쪽 box의 오른쪽 경계선을 없애야 함.
+// 3. 처음 시작 시, User와 Computer 이름만 중간에 뜨도록
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+//[추가로 하면 좋은 것]
+// 1. 반응형 웹 만들기
+// 2. 게임 시작 전, 랜딩페이지 (게임시작페이지 만들기)
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 문제와 해결
+1. react 객체에서 src 폴더에 있는 image 파일을 불러오는 방법
+- 문제: 처음에는 img에 url을 삽입하였다. 허나, 버튼 선택에서 사용한 이미지와 같은 이미지를 결과 화면에도 보여주고 싶었다. 상대 경로와 절대 경로를 바로 삽입하는 것으로는 해결되지 않았다.
+- 해결: src 폴더에 있는 이미지 상대 경로를 import하여 이미지 경로 마다 고유 키워드를 작성한다. 그 후, 선언한 option 객체의 하위 요소인 img에 이미지 별로 제공한 키워드를 작성한다.
+(사진)
+2. 사용자가 요소 클릭 시, 점수 값이 바로 바뀌지 않는 문제 (state의 바로 반영 X)
+- 
+3. 컴퓨터 박스의 오른쪽 경계선 없애기
+- 
+4. 화면 시작 시, User와 Computer의 이름만 중간에 나타나도록 하기
+- 
+<br><br>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
-# RockScissorPaperGame
-This is a RockScissorPaperGame.
->>>>>>> ed020c1c8397a1516716da97cf253d29e8e5004f
+## 추가 제작 예정 기능
+1. 반응형 웹으로 만들기
+2. 게임 랜딩페이지 만들기
